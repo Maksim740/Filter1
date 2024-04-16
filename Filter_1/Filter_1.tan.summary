@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.429 ns
+From           : add_sub
+To             : mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[4]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.596 ns
+From           : lpm_shiftreg:inst4|dffs[0]
+To             : outtttt
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.324 ns
+From           : input_data[2]
+To             : lpm_shiftreg:inst4|dffs[2]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 406.83 MHz ( period = 2.458 ns )
+From           : 8tapfir:inst|lut16:inst5|DATA[3]
+To             : mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[4]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

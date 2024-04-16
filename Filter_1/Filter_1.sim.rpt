@@ -1,0 +1,314 @@
+Simulator report for Filter_1
+Sun Apr 14 18:25:55 2024
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 ms       ;
+; Simulation Netlist Size     ; 147 nodes    ;
+; Simulation Coverage         ;      99.34 % ;
+; Total Number of Transitions ; 205010       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5T144C6  ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                         ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+; Option                                                                                     ; Setting                       ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                        ; Timing        ;
+; Start time                                                                                 ; 0 ns                          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                          ;               ;
+; Vector input source                                                                        ; test_simulation/Waveform2.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                            ; On            ;
+; Check outputs                                                                              ; Off                           ; Off           ;
+; Report simulation coverage                                                                 ; On                            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                            ; On            ;
+; Display missing 1-value coverage report                                                    ; On                            ; On            ;
+; Display missing 0-value coverage report                                                    ; On                            ; On            ;
+; Detect setup and hold time violations                                                      ; Off                           ; Off           ;
+; Detect glitches                                                                            ; Off                           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                           ; Off           ;
+; Generate Signal Activity File                                                              ; Off                           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                          ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      99.34 % ;
+; Total nodes checked                                 ; 147          ;
+; Total output ports checked                          ; 151          ;
+; Total output ports with complete 1/0-value coverage ; 150          ;
+; Total output ports with no 1/0-value coverage       ; 1            ;
+; Total output ports with no 1-value coverage         ; 1            ;
+; Total output ports with no 0-value coverage         ; 1            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                  ;
++-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                           ; Output Port Name                                                                    ; Output Port Type ;
++-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------+
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[4]    ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[4]    ; regout           ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[3]    ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[3]    ; regout           ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[2]    ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[2]    ; regout           ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[1]    ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[1]    ; regout           ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[0]    ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[0]    ; regout           ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[0]~6  ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[0]~6  ; cout             ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[0]~7  ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[0]~7  ; combout          ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[0]~7  ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[0]~8  ; cout             ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[1]~9  ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[1]~9  ; combout          ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[1]~9  ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[1]~10 ; cout             ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[2]~11 ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[2]~11 ; combout          ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[2]~11 ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[2]~12 ; cout             ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[3]~13 ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[3]~13 ; combout          ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[3]~13 ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[3]~14 ; cout             ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[4]~15 ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|pipeline_dffe[4]~15 ; combout          ;
+; |Filter_1|lpm_shiftreg:inst4|dffs[0]                                                ; |Filter_1|lpm_shiftreg:inst4|dffs[0]                                                ; regout           ;
+; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[3]                                      ; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[3]                                      ; regout           ;
+; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[2]                                      ; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[2]                                      ; regout           ;
+; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[1]                                      ; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[1]                                      ; regout           ;
+; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[0]                                      ; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[0]                                      ; regout           ;
+; |Filter_1|lpm_shiftreg:inst4|dffs[1]                                                ; |Filter_1|lpm_shiftreg:inst4|dffs[1]                                                ; regout           ;
+; |Filter_1|lpm_shiftreg:inst4|_~0                                                    ; |Filter_1|lpm_shiftreg:inst4|_~0                                                    ; combout          ;
+; |Filter_1|mac:inst7|ANDW:inst4|output[4]                                            ; |Filter_1|mac:inst7|ANDW:inst4|output[4]                                            ; combout          ;
+; |Filter_1|mac:inst7|ANDW:inst4|output[3]                                            ; |Filter_1|mac:inst7|ANDW:inst4|output[3]                                            ; combout          ;
+; |Filter_1|8tapfir:inst|lut16:inst5|DATA[3]                                          ; |Filter_1|8tapfir:inst|lut16:inst5|DATA[3]                                          ; regout           ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|_~0                 ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|_~0                 ; combout          ;
+; |Filter_1|mac:inst7|ANDW:inst4|output[2]                                            ; |Filter_1|mac:inst7|ANDW:inst4|output[2]                                            ; combout          ;
+; |Filter_1|8tapfir:inst|lut16:inst5|DATA[2]                                          ; |Filter_1|8tapfir:inst|lut16:inst5|DATA[2]                                          ; regout           ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|_~1                 ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|_~1                 ; combout          ;
+; |Filter_1|mac:inst7|ANDW:inst4|output[1]                                            ; |Filter_1|mac:inst7|ANDW:inst4|output[1]                                            ; combout          ;
+; |Filter_1|8tapfir:inst|lut16:inst5|DATA[1]                                          ; |Filter_1|8tapfir:inst|lut16:inst5|DATA[1]                                          ; regout           ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|_~2                 ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|_~2                 ; combout          ;
+; |Filter_1|mac:inst7|ANDW:inst4|output[0]                                            ; |Filter_1|mac:inst7|ANDW:inst4|output[0]                                            ; combout          ;
+; |Filter_1|8tapfir:inst|lut16:inst5|DATA[0]                                          ; |Filter_1|8tapfir:inst|lut16:inst5|DATA[0]                                          ; regout           ;
+; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|_~3                 ; |Filter_1|mac:inst7|lpm_add_sub:inst|add_sub_pth:auto_generated|_~3                 ; combout          ;
+; |Filter_1|lpm_shiftreg:inst4|dffs[2]                                                ; |Filter_1|lpm_shiftreg:inst4|dffs[2]                                                ; regout           ;
+; |Filter_1|lpm_shiftreg:inst4|_~1                                                    ; |Filter_1|lpm_shiftreg:inst4|_~1                                                    ; combout          ;
+; |Filter_1|8tapfir:inst|summator:inst|inst1                                          ; |Filter_1|8tapfir:inst|summator:inst|inst1                                          ; regout           ;
+; |Filter_1|8tapfir:inst|summator:inst1|inst1                                         ; |Filter_1|8tapfir:inst|summator:inst1|inst1                                         ; regout           ;
+; |Filter_1|8tapfir:inst|summator:inst3|inst1                                         ; |Filter_1|8tapfir:inst|summator:inst3|inst1                                         ; regout           ;
+; |Filter_1|8tapfir:inst|summator:inst2|inst1                                         ; |Filter_1|8tapfir:inst|summator:inst2|inst1                                         ; regout           ;
+; |Filter_1|8tapfir:inst|lut16:inst5|Mux0~0                                           ; |Filter_1|8tapfir:inst|lut16:inst5|Mux0~0                                           ; combout          ;
+; |Filter_1|8tapfir:inst|lut16:inst5|Mux1~0                                           ; |Filter_1|8tapfir:inst|lut16:inst5|Mux1~0                                           ; combout          ;
+; |Filter_1|8tapfir:inst|lut16:inst5|Mux2~0                                           ; |Filter_1|8tapfir:inst|lut16:inst5|Mux2~0                                           ; combout          ;
+; |Filter_1|8tapfir:inst|lut16:inst5|Mux3~0                                           ; |Filter_1|8tapfir:inst|lut16:inst5|Mux3~0                                           ; combout          ;
+; |Filter_1|lpm_shiftreg:inst4|dffs[3]                                                ; |Filter_1|lpm_shiftreg:inst4|dffs[3]                                                ; regout           ;
+; |Filter_1|lpm_shiftreg:inst4|_~2                                                    ; |Filter_1|lpm_shiftreg:inst4|_~2                                                    ; combout          ;
+; |Filter_1|8tapfir:inst|summator:inst|inst2                                          ; |Filter_1|8tapfir:inst|summator:inst|inst2                                          ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[0]                                  ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[0]                                  ; regout           ;
+; |Filter_1|8tapfir:inst|summator:inst|inst8~0                                        ; |Filter_1|8tapfir:inst|summator:inst|inst8~0                                        ; combout          ;
+; |Filter_1|8tapfir:inst|summator:inst1|inst2                                         ; |Filter_1|8tapfir:inst|summator:inst1|inst2                                         ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[0]                                  ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[0]                                  ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[0]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[0]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|summator:inst1|inst8~0                                       ; |Filter_1|8tapfir:inst|summator:inst1|inst8~0                                       ; combout          ;
+; |Filter_1|8tapfir:inst|summator:inst3|inst2                                         ; |Filter_1|8tapfir:inst|summator:inst3|inst2                                         ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[0]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[0]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[0]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[0]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|summator:inst3|inst8~0                                       ; |Filter_1|8tapfir:inst|summator:inst3|inst8~0                                       ; combout          ;
+; |Filter_1|8tapfir:inst|summator:inst2|inst2                                         ; |Filter_1|8tapfir:inst|summator:inst2|inst2                                         ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[0]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[0]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[0]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[0]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|summator:inst2|inst8~0                                       ; |Filter_1|8tapfir:inst|summator:inst2|inst8~0                                       ; combout          ;
+; |Filter_1|lpm_shiftreg:inst4|dffs[4]                                                ; |Filter_1|lpm_shiftreg:inst4|dffs[4]                                                ; regout           ;
+; |Filter_1|lpm_shiftreg:inst4|_~3                                                    ; |Filter_1|lpm_shiftreg:inst4|_~3                                                    ; combout          ;
+; |Filter_1|8tapfir:inst|summator:inst|inst9~0                                        ; |Filter_1|8tapfir:inst|summator:inst|inst9~0                                        ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[1]                                  ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[1]                                  ; regout           ;
+; |Filter_1|8tapfir:inst|summator:inst1|inst9~0                                       ; |Filter_1|8tapfir:inst|summator:inst1|inst9~0                                       ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[1]                                  ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[1]                                  ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[1]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[1]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|summator:inst3|inst9~0                                       ; |Filter_1|8tapfir:inst|summator:inst3|inst9~0                                       ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[1]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[1]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[1]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[1]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|summator:inst2|inst9~0                                       ; |Filter_1|8tapfir:inst|summator:inst2|inst9~0                                       ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[1]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[1]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[1]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[1]                                   ; regout           ;
+; |Filter_1|lpm_shiftreg:inst4|_~4                                                    ; |Filter_1|lpm_shiftreg:inst4|_~4                                                    ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[2]                                  ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[2]                                  ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[2]                                  ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[2]                                  ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[2]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[2]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[2]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[2]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[2]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[2]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[2]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[2]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[2]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[2]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[3]                                  ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[3]                                  ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[3]                                  ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[3]                                  ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[3]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[3]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[3]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[3]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[3]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[3]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[3]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[3]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[3]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[3]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[4]                                  ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[4]                                  ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[4]                                  ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[4]                                  ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[4]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[4]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[4]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[4]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[4]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[4]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[4]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[4]                                   ; regout           ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[4]                                   ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[4]                                   ; regout           ;
+; |Filter_1|outtttt                                                                   ; |Filter_1|outtttt                                                                   ; padio            ;
+; |Filter_1|out[8]                                                                    ; |Filter_1|out[8]                                                                    ; padio            ;
+; |Filter_1|out[7]                                                                    ; |Filter_1|out[7]                                                                    ; padio            ;
+; |Filter_1|out[6]                                                                    ; |Filter_1|out[6]                                                                    ; padio            ;
+; |Filter_1|out[5]                                                                    ; |Filter_1|out[5]                                                                    ; padio            ;
+; |Filter_1|out[4]                                                                    ; |Filter_1|out[4]                                                                    ; padio            ;
+; |Filter_1|out[3]                                                                    ; |Filter_1|out[3]                                                                    ; padio            ;
+; |Filter_1|out[2]                                                                    ; |Filter_1|out[2]                                                                    ; padio            ;
+; |Filter_1|out[1]                                                                    ; |Filter_1|out[1]                                                                    ; padio            ;
+; |Filter_1|out[0]                                                                    ; |Filter_1|out[0]                                                                    ; padio            ;
+; |Filter_1|input_data[0]                                                             ; |Filter_1|input_data[0]~corein                                                      ; combout          ;
+; |Filter_1|load                                                                      ; |Filter_1|load~corein                                                               ; combout          ;
+; |Filter_1|clk                                                                       ; |Filter_1|clk~corein                                                                ; combout          ;
+; |Filter_1|nReset[4]                                                                 ; |Filter_1|nReset[4]~corein                                                          ; combout          ;
+; |Filter_1|add_sub                                                                   ; |Filter_1|add_sub~corein                                                            ; combout          ;
+; |Filter_1|nReset[3]                                                                 ; |Filter_1|nReset[3]~corein                                                          ; combout          ;
+; |Filter_1|nReset[2]                                                                 ; |Filter_1|nReset[2]~corein                                                          ; combout          ;
+; |Filter_1|nReset[1]                                                                 ; |Filter_1|nReset[1]~corein                                                          ; combout          ;
+; |Filter_1|nReset[0]                                                                 ; |Filter_1|nReset[0]~corein                                                          ; combout          ;
+; |Filter_1|input_data[1]                                                             ; |Filter_1|input_data[1]~corein                                                      ; combout          ;
+; |Filter_1|input_data[2]                                                             ; |Filter_1|input_data[2]~corein                                                      ; combout          ;
+; |Filter_1|nFirst                                                                    ; |Filter_1|nFirst~corein                                                             ; combout          ;
+; |Filter_1|input_data[3]                                                             ; |Filter_1|input_data[3]~corein                                                      ; combout          ;
+; |Filter_1|clk~clkctrl                                                               ; |Filter_1|clk~clkctrl                                                               ; outclk           ;
+; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[3]~feeder                               ; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[3]~feeder                               ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[4]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[4]~feeder                            ; combout          ;
+; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[2]~feeder                               ; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[2]~feeder                               ; combout          ;
+; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[1]~feeder                               ; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[1]~feeder                               ; combout          ;
+; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[0]~feeder                               ; |Filter_1|mac:inst7|lpm_shiftreg:inst1|dffs[0]~feeder                               ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[4]~feeder                           ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[4]~feeder                           ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[4]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[4]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[4]~feeder                           ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[4]~feeder                           ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[4]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[4]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[4]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[4]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[0]~feeder                           ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[0]~feeder                           ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[0]~feeder                           ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[0]~feeder                           ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[0]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[0]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[0]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[0]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[0]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[0]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[1]~feeder                           ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst11|dffs[1]~feeder                           ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[1]~feeder                           ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[1]~feeder                           ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[1]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[1]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[1]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[1]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[1]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[1]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[2]~feeder                           ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst10|dffs[2]~feeder                           ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[2]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[2]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[2]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[2]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[2]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[2]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[2]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst7|dffs[2]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[3]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst4|dffs[3]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[3]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst9|dffs[3]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[3]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst6|dffs[3]~feeder                            ; combout          ;
+; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[3]~feeder                            ; |Filter_1|8tapfir:inst|lpm_shiftreg:inst8|dffs[3]~feeder                            ; combout          ;
++-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------+
+; Missing 1-Value Coverage                              ;
++--------------+---------------------+------------------+
+; Node Name    ; Output Port Name    ; Output Port Type ;
++--------------+---------------------+------------------+
+; |Filter_1|en ; |Filter_1|en~corein ; combout          ;
++--------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------+
+; Missing 0-Value Coverage                              ;
++--------------+---------------------+------------------+
+; Node Name    ; Output Port Name    ; Output Port Type ;
++--------------+---------------------+------------------+
+; |Filter_1|en ; |Filter_1|en~corein ; combout          ;
++--------------+---------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Sun Apr 14 18:25:49 2024
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Filter_1 -c Filter_1
+Info: Using vector source file "test_simulation/Waveform2.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      99.34 %
+Info: Number of transitions in simulation is 205010
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 148 megabytes
+    Info: Processing ended: Sun Apr 14 18:25:55 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
+
+

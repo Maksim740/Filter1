@@ -1,0 +1,635 @@
+|Filter_1
+outtttt <= LPM_SHIFTREG:inst4.shiftout
+en => LPM_SHIFTREG:inst4.enable
+en => 8tapfir:inst.en
+clk => LPM_SHIFTREG:inst4.clock
+clk => MAC:inst7.clk
+clk => 8tapfir:inst.clk
+load => LPM_SHIFTREG:inst4.load
+input_data[0] => MySignExtension:inst5.input_data[0]
+input_data[1] => MySignExtension:inst5.input_data[1]
+input_data[2] => MySignExtension:inst5.input_data[2]
+input_data[3] => MySignExtension:inst5.input_data[3]
+out[0] <= MAC:inst7.out[0]
+out[1] <= MAC:inst7.out[1]
+out[2] <= MAC:inst7.out[2]
+out[3] <= MAC:inst7.out[3]
+out[4] <= MAC:inst7.out[4]
+out[5] <= MAC:inst7.out[5]
+out[6] <= MAC:inst7.out[6]
+out[7] <= MAC:inst7.out[7]
+out[8] <= MAC:inst7.out[8]
+add_sub => MAC:inst7.add_sub
+nReset[0] => MAC:inst7.nReset[0]
+nReset[1] => MAC:inst7.nReset[1]
+nReset[2] => MAC:inst7.nReset[2]
+nReset[3] => MAC:inst7.nReset[3]
+nReset[4] => MAC:inst7.nReset[4]
+nFirst => 8tapfir:inst.nFirst
+
+
+|Filter_1|LPM_SHIFTREG:inst4
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|MySignExtension:inst5
+input_data[0] => output_data[0].DATAIN
+input_data[1] => output_data[1].DATAIN
+input_data[2] => output_data[2].DATAIN
+input_data[3] => output_data[3].DATAIN
+input_data[3] => output_data[4].DATAIN
+output_data[0] <= input_data[0].DB_MAX_OUTPUT_PORT_TYPE
+output_data[1] <= input_data[1].DB_MAX_OUTPUT_PORT_TYPE
+output_data[2] <= input_data[2].DB_MAX_OUTPUT_PORT_TYPE
+output_data[3] <= input_data[3].DB_MAX_OUTPUT_PORT_TYPE
+output_data[4] <= input_data[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|MAC:inst7
+out[0] <= LPM_SHIFTREG:inst1.q[0]
+out[1] <= LPM_SHIFTREG:inst1.q[1]
+out[2] <= LPM_SHIFTREG:inst1.q[2]
+out[3] <= LPM_SHIFTREG:inst1.q[3]
+out[4] <= LPM_ADD_SUB:inst.result[0]
+out[5] <= LPM_ADD_SUB:inst.result[1]
+out[6] <= LPM_ADD_SUB:inst.result[2]
+out[7] <= LPM_ADD_SUB:inst.result[3]
+out[8] <= LPM_ADD_SUB:inst.result[4]
+add_sub => LPM_ADD_SUB:inst.add_sub
+clk => LPM_ADD_SUB:inst.clock
+clk => LPM_SHIFTREG:inst1.clock
+nReset[0] => ANDW:inst4.input2[0]
+nReset[1] => ANDW:inst4.input2[1]
+nReset[2] => ANDW:inst4.input2[2]
+nReset[3] => ANDW:inst4.input2[3]
+nReset[4] => ANDW:inst4.input2[4]
+x[0] => LPM_ADD_SUB:inst.datab[0]
+x[1] => LPM_ADD_SUB:inst.datab[1]
+x[2] => LPM_ADD_SUB:inst.datab[2]
+x[3] => LPM_ADD_SUB:inst.datab[3]
+x[4] => LPM_ADD_SUB:inst.datab[4]
+
+
+|Filter_1|MAC:inst7|LPM_ADD_SUB:inst
+dataa[0] => add_sub_pth:auto_generated.dataa[0]
+dataa[1] => add_sub_pth:auto_generated.dataa[1]
+dataa[2] => add_sub_pth:auto_generated.dataa[2]
+dataa[3] => add_sub_pth:auto_generated.dataa[3]
+dataa[4] => add_sub_pth:auto_generated.dataa[4]
+datab[0] => add_sub_pth:auto_generated.datab[0]
+datab[1] => add_sub_pth:auto_generated.datab[1]
+datab[2] => add_sub_pth:auto_generated.datab[2]
+datab[3] => add_sub_pth:auto_generated.datab[3]
+datab[4] => add_sub_pth:auto_generated.datab[4]
+cin => ~NO_FANOUT~
+add_sub => add_sub_pth:auto_generated.add_sub
+clock => add_sub_pth:auto_generated.clock
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= add_sub_pth:auto_generated.result[0]
+result[1] <= add_sub_pth:auto_generated.result[1]
+result[2] <= add_sub_pth:auto_generated.result[2]
+result[3] <= add_sub_pth:auto_generated.result[3]
+result[4] <= add_sub_pth:auto_generated.result[4]
+cout <= <GND>
+overflow <= <GND>
+
+
+|Filter_1|MAC:inst7|LPM_ADD_SUB:inst|add_sub_pth:auto_generated
+add_sub => _.IN0
+add_sub => _.IN0
+add_sub => _.IN0
+clock => pipeline_dffe[4].CLK
+clock => pipeline_dffe[3].CLK
+clock => pipeline_dffe[2].CLK
+clock => pipeline_dffe[1].CLK
+clock => pipeline_dffe[0].CLK
+dataa[0] => op_1.IN8
+dataa[1] => op_1.IN6
+dataa[2] => op_1.IN4
+dataa[3] => op_1.IN2
+dataa[4] => op_1.IN0
+datab[0] => _.IN1
+datab[1] => _.IN1
+datab[2] => _.IN1
+datab[3] => _.IN1
+datab[4] => _.IN1
+result[0] <= pipeline_dffe[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= pipeline_dffe[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= pipeline_dffe[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= pipeline_dffe[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= pipeline_dffe[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|MAC:inst7|ANDW:inst4
+input1[0] => process_0.IN0
+input1[1] => process_0.IN0
+input1[2] => process_0.IN0
+input1[3] => process_0.IN0
+input1[4] => process_0.IN0
+input2[0] => process_0.IN1
+input2[1] => process_0.IN1
+input2[2] => process_0.IN1
+input2[3] => process_0.IN1
+input2[4] => process_0.IN1
+output[0] <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|MAC:inst7|LPM_SHIFTREG:inst1
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|8tapfir:inst
+y2s <= LPM_SHIFTREG:inst12.shiftout
+x1s => LPM_SHIFTREG:inst4.shiftin
+x1s => summator:inst.xs
+en => LPM_SHIFTREG:inst4.enable
+en => LPM_SHIFTREG:inst6.enable
+en => LPM_SHIFTREG:inst7.enable
+en => LPM_SHIFTREG:inst8.enable
+en => LPM_SHIFTREG:inst9.enable
+en => LPM_SHIFTREG:inst10.enable
+en => LPM_SHIFTREG:inst11.enable
+en => LPM_SHIFTREG:inst12.enable
+clk => LPM_SHIFTREG:inst4.clock
+clk => LPM_SHIFTREG:inst6.clock
+clk => LPM_SHIFTREG:inst7.clock
+clk => LPM_SHIFTREG:inst8.clock
+clk => LPM_SHIFTREG:inst9.clock
+clk => LPM_SHIFTREG:inst10.clock
+clk => LPM_SHIFTREG:inst11.clock
+clk => LPM_SHIFTREG:inst12.clock
+clk => lut16:inst5.clk
+clk => summator:inst.clk
+clk => summator:inst1.clk
+clk => summator:inst3.clk
+clk => summator:inst2.clk
+result[0] <= lut16:inst5.DATA[0]
+result[1] <= lut16:inst5.DATA[1]
+result[2] <= lut16:inst5.DATA[2]
+result[3] <= lut16:inst5.DATA[3]
+result[4] <= lut16:inst5.DATA[4]
+nFirst => summator:inst.nFirst
+nFirst => summator:inst1.nFirst
+nFirst => summator:inst3.nFirst
+nFirst => summator:inst2.nFirst
+
+
+|Filter_1|8tapfir:inst|LPM_SHIFTREG:inst12
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|8tapfir:inst|LPM_SHIFTREG:inst11
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|8tapfir:inst|LPM_SHIFTREG:inst10
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|8tapfir:inst|LPM_SHIFTREG:inst9
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|8tapfir:inst|LPM_SHIFTREG:inst8
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|8tapfir:inst|LPM_SHIFTREG:inst7
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|8tapfir:inst|LPM_SHIFTREG:inst6
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|8tapfir:inst|LPM_SHIFTREG:inst4
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|8tapfir:inst|lut16:inst5
+ADDR[0] => Mux0.IN19
+ADDR[0] => Mux1.IN19
+ADDR[0] => Mux2.IN10
+ADDR[0] => Mux3.IN5
+ADDR[1] => Mux0.IN18
+ADDR[1] => Mux1.IN18
+ADDR[1] => Mux2.IN9
+ADDR[2] => Mux0.IN17
+ADDR[2] => Mux1.IN17
+ADDR[2] => Mux2.IN8
+ADDR[2] => Mux3.IN4
+ADDR[3] => Mux0.IN16
+ADDR[3] => Mux1.IN16
+clk => DATA[0]~reg0.CLK
+clk => DATA[1]~reg0.CLK
+clk => DATA[2]~reg0.CLK
+clk => DATA[3]~reg0.CLK
+clk => DATA[4]~reg0.CLK
+DATA[0] <= DATA[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA[1] <= DATA[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA[2] <= DATA[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA[3] <= DATA[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA[4] <= DATA[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Filter_1|8tapfir:inst|summator:inst
+ssum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst1.CLK
+clk => inst2.CLK
+xs => inst7.IN0
+xs => inst4.IN0
+xs => inst.IN0
+ys => inst7.IN1
+ys => inst5.IN0
+ys => inst.IN1
+nFirst => inst3.IN0
+
+
+|Filter_1|8tapfir:inst|summator:inst1
+ssum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst1.CLK
+clk => inst2.CLK
+xs => inst7.IN0
+xs => inst4.IN0
+xs => inst.IN0
+ys => inst7.IN1
+ys => inst5.IN0
+ys => inst.IN1
+nFirst => inst3.IN0
+
+
+|Filter_1|8tapfir:inst|summator:inst3
+ssum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst1.CLK
+clk => inst2.CLK
+xs => inst7.IN0
+xs => inst4.IN0
+xs => inst.IN0
+ys => inst7.IN1
+ys => inst5.IN0
+ys => inst.IN1
+nFirst => inst3.IN0
+
+
+|Filter_1|8tapfir:inst|summator:inst2
+ssum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst1.CLK
+clk => inst2.CLK
+xs => inst7.IN0
+xs => inst4.IN0
+xs => inst.IN0
+ys => inst7.IN1
+ys => inst5.IN0
+ys => inst.IN1
+nFirst => inst3.IN0
+
+
