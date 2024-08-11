@@ -27,31 +27,7 @@ applicable agreement for further details.
 	(text "DEFAULT VALUE" (rect 141 0 229 12)(font "Arial" ))
 	(text "C0" (rect 3 16 18 30)(font "Arial" (font_size 8)))
 	(text " NAME" (rect 108 0 142 12)(font "Arial" ))
-	(text "1" (rect 141 16 148 30)(font "Arial" (font_size 8)))
-	(drawing
-		(line (pt 138 40)(pt 138 0)(line_width 1))
-	)
-)
-(global
-	(rect 16 -120 304 -80)
-	(parameter)
-	(text "PARAM" (rect 3 -1 46 13)(font "Arial" (font_size 8)))
-	(text "DEFAULT VALUE" (rect 141 0 229 12)(font "Arial" ))
-	(text "W" (rect 3 16 14 30)(font "Arial" (font_size 8)))
-	(text " NAME" (rect 108 0 142 12)(font "Arial" ))
-	(text "5" (rect 141 16 148 30)(font "Arial" (font_size 8)))
-	(drawing
-		(line (pt 138 40)(pt 138 0)(line_width 1))
-	)
-)
-(global
-	(rect 16 -80 304 -40)
-	(parameter)
-	(text "PARAM" (rect 3 -1 46 13)(font "Arial" (font_size 8)))
-	(text "DEFAULT VALUE" (rect 141 0 229 12)(font "Arial" ))
-	(text "N" (rect 3 16 11 30)(font "Arial" (font_size 8)))
-	(text " NAME" (rect 108 0 142 12)(font "Arial" ))
-	(text "4" (rect 141 16 148 30)(font "Arial" (font_size 8)))
+	(text "-16" (rect 141 16 159 30)(font "Arial" (font_size 8)))
 	(drawing
 		(line (pt 138 40)(pt 138 0)(line_width 1))
 	)
@@ -63,7 +39,7 @@ applicable agreement for further details.
 	(text "DEFAULT VALUE" (rect 141 0 229 12)(font "Arial" ))
 	(text "C1" (rect 3 16 18 30)(font "Arial" (font_size 8)))
 	(text " NAME" (rect 108 0 142 12)(font "Arial" ))
-	(text "2" (rect 141 16 148 30)(font "Arial" (font_size 8)))
+	(text "-9" (rect 141 16 152 30)(font "Arial" (font_size 8)))
 	(drawing
 		(line (pt 138 40)(pt 138 0)(line_width 1))
 	)
@@ -75,7 +51,7 @@ applicable agreement for further details.
 	(text "DEFAULT VALUE" (rect 141 0 229 12)(font "Arial" ))
 	(text "C2" (rect 3 16 18 30)(font "Arial" (font_size 8)))
 	(text " NAME" (rect 108 0 142 12)(font "Arial" ))
-	(text "3" (rect 141 16 148 30)(font "Arial" (font_size 8)))
+	(text "86" (rect 141 16 155 30)(font "Arial" (font_size 8)))
 	(drawing
 		(line (pt 138 40)(pt 138 0)(line_width 1))
 	)
@@ -87,7 +63,31 @@ applicable agreement for further details.
 	(text "DEFAULT VALUE" (rect 141 0 229 12)(font "Arial" ))
 	(text "C3" (rect 3 16 18 30)(font "Arial" (font_size 8)))
 	(text " NAME" (rect 108 0 142 12)(font "Arial" ))
-	(text "4" (rect 141 16 148 30)(font "Arial" (font_size 8)))
+	(text "67" (rect 141 16 155 30)(font "Arial" (font_size 8)))
+	(drawing
+		(line (pt 138 40)(pt 138 0)(line_width 1))
+	)
+)
+(global
+	(rect 16 -80 304 -40)
+	(parameter)
+	(text "PARAM" (rect 3 -1 46 13)(font "Arial" (font_size 8)))
+	(text "DEFAULT VALUE" (rect 141 0 229 12)(font "Arial" ))
+	(text "N" (rect 3 16 11 30)(font "Arial" (font_size 8)))
+	(text " NAME" (rect 108 0 142 12)(font "Arial" ))
+	(text "8" (rect 141 16 148 30)(font "Arial" (font_size 8)))
+	(drawing
+		(line (pt 138 40)(pt 138 0)(line_width 1))
+	)
+)
+(global
+	(rect 16 -120 304 -80)
+	(parameter)
+	(text "PARAM" (rect 3 -1 46 13)(font "Arial" (font_size 8)))
+	(text "DEFAULT VALUE" (rect 141 0 229 12)(font "Arial" ))
+	(text "W" (rect 3 16 14 30)(font "Arial" (font_size 8)))
+	(text " NAME" (rect 108 0 142 12)(font "Arial" ))
+	(text "9" (rect 141 16 148 30)(font "Arial" (font_size 8)))
 	(drawing
 		(line (pt 138 40)(pt 138 0)(line_width 1))
 	)

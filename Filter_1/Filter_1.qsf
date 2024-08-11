@@ -56,5 +56,6 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name VECTOR_WAVEFORM_FILE test_simulation/Filter_1.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE test_simulation/Waveform1.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE test_simulation/Waveform2.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE test_simulation/Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE test_simulation/Waveform_8bit_input.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE test_simulation/Waveform_8bit_input.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

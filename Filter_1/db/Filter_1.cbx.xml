@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Filter_1">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Filter_1|MAC:inst7|LPM_ADD_SUB:inst" CBX_FILE_NAME="add_sub_pth.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Filter_1|MAC:inst7|LPM_ADD_SUB:inst" CBX_FILE_NAME="add_sub_tth.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
